@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fieldnote Press — Letterpress studio</title>
   <meta name="description" content="Fieldnote Press is a small letterpress studio setting type by hand for invitations, stationery, and small-run art prints.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#241E17">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preload" href="fonts/gill-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gill-sans-heavy.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -34,7 +37,9 @@
             like someone actually made them.</p>
           <a class="btn btn-primary reveal" href="contact.html">☞ Start a project</a>
         </div>
-        <div class="hero-mark reveal" aria-hidden="true"></div>
+        <div class="hero-mark reveal" aria-hidden="true">
+          <img src="images/hero-press.svg" alt="" width="600" height="440" loading="eager">
+        </div>
       </div>
     </section>
 
@@ -46,15 +51,18 @@
         </div>
         <div class="trio">
           <div class="trio-item">
+            <img class="trio-icon" src="images/icon-invitation.svg" alt="" width="46" height="46">
             <h3 class="card-heading">Wedding &amp; event stationery</h3>
             <p>Invitations, place cards, and programs, printed on cotton stock with a deep, tactile
               impression.</p>
           </div>
           <div class="trio-item">
+            <img class="trio-icon" src="images/icon-cards.svg" alt="" width="46" height="46">
             <h3 class="card-heading">Business cards &amp; letterhead</h3>
             <p>Everyday paper goods for people who want their correspondence to feel considered.</p>
           </div>
           <div class="trio-item">
+            <img class="trio-icon" src="images/icon-print.svg" alt="" width="46" height="46">
             <h3 class="card-heading">Small-run art prints</h3>
             <p>Limited editions of 25 to 100, hand-numbered, from wood and metal type in our own case.</p>
           </div>
@@ -70,22 +78,34 @@
         </div>
         <div class="process">
           <div class="process-item">
-            <span class="process-num">01</span>
+            <div class="process-item-head">
+              <span class="process-num">01</span>
+              <img class="process-icon" src="images/icon-set-type.svg" alt="" width="40" height="40">
+            </div>
             <h3 class="card-heading">Set the type</h3>
             <p>Letters are pulled from the case and composed by hand, line by line.</p>
           </div>
           <div class="process-item">
-            <span class="process-num">02</span>
+            <div class="process-item-head">
+              <span class="process-num">02</span>
+              <img class="process-icon" src="images/icon-lock-chase.svg" alt="" width="40" height="40">
+            </div>
             <h3 class="card-heading">Lock the chase</h3>
             <p>The set type is wedged tight into a steel frame so nothing shifts under pressure.</p>
           </div>
           <div class="process-item">
-            <span class="process-num">03</span>
+            <div class="process-item-head">
+              <span class="process-num">03</span>
+              <img class="process-icon" src="images/icon-ink-proof.svg" alt="" width="40" height="40">
+            </div>
             <h3 class="card-heading">Ink and pull a proof</h3>
             <p>We mix ink to match, then check the first sheet for depth and registration.</p>
           </div>
           <div class="process-item">
-            <span class="process-num">04</span>
+            <div class="process-item-head">
+              <span class="process-num">04</span>
+              <img class="process-icon" src="images/icon-run-edition.svg" alt="" width="40" height="40">
+            </div>
             <h3 class="card-heading">Run the edition</h3>
             <p>Once the proof is approved, we run the full count, sheet by sheet.</p>
           </div>

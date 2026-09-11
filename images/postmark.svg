@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-labelledby="pmTitle">
+  <title id="pmTitle">A hand-cancelled stamp and postmark</title>
+  <rect x="16" y="14" width="92" height="112" fill="none" stroke="#241E17" stroke-width="6" stroke-dasharray="1 11" stroke-linecap="round"/>
+  <rect x="30" y="28" width="64" height="84" fill="none" stroke="#241E17" stroke-width="5"/>
+  <circle cx="62" cy="70" r="20" fill="#7C2A1E"/>
+  <circle cx="140" cy="76" r="40" fill="none" stroke="#241E17" stroke-width="5"/>
+  <path d="M96 50 L124 46 M186 60 L158 66 M100 108 L126 98 M182 100 L156 92" stroke="#241E17" stroke-width="5" stroke-linecap="round"/>
+</svg>

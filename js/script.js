@@ -1,78 +1,92 @@
-// Fieldnote Press — contact form handling
-// This is a static site with no backend, so submitting the form validates
-// the fields client-side and shows a confirmation message in place of
-// sending any data. Wire this up to a real endpoint (fetch/POST, a form
-// service, etc.) when the site has somewhere to send messages.
-
 (function () {
-  const form = document.getElementById('contact-form');
-  if (!form) return; // not on this page
+  "use strict";
 
-  const status = document.getElementById('form-status');
-
-  const fields = [
-    {
-      id: 'name',
-      validate: (value) => value.trim().length > 0,
-      message: 'Enter your name.',
-    },
-    {
-      id: 'email',
-      validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
-      message: 'Enter a valid email address.',
-    },
-    {
-      id: 'project-type',
-      validate: (value) => value.trim().length > 0,
-      message: 'Choose a project type.',
-    },
-    {
-      id: 'message',
-      validate: (value) => value.trim().length > 0,
-      message: 'Add a short message.',
-    },
-  ];
-
-  function setError(fieldId, message) {
-    const input = document.getElementById(fieldId);
-    const errorEl = document.getElementById(fieldId + '-error');
-    const wrapper = input.closest('.field');
-    if (message) {
-      wrapper.classList.add('has-error');
-      errorEl.textContent = message;
-      input.setAttribute('aria-invalid', 'true');
+  /* Reveal elements as they enter the viewport. */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (revealEls.length) {
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(
+        function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) {
+              entries[i].target.classList.add("is-visible");
+              io.unobserve(entries[i].target);
+            }
+          }
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
+      );
+      for (var i = 0; i < revealEls.length; i++) io.observe(revealEls[i]);
     } else {
-      wrapper.classList.remove('has-error');
-      errorEl.textContent = '';
-      input.removeAttribute('aria-invalid');
+      for (var i = 0; i < revealEls.length; i++) revealEls[i].classList.add("is-visible");
     }
   }
 
-  form.addEventListener('submit', function (event) {
+  /* Contact form: inline validation + a friendly confirmation state. */
+  var form = document.getElementById("contact-form");
+  if (!form) return;
+
+  var status = document.getElementById("form-status");
+
+  var fields = [
+    { id: "name", message: "Let us know your name." },
+    { id: "email", message: "Enter an email so we can reply.", isEmail: true },
+    { id: "project-type", message: "Choose the kind of project." },
+    { id: "message", message: "Tell us a little about the project." }
+  ];
+
+  function setError(fieldId, message) {
+    var input = document.getElementById(fieldId);
+    var errorEl = document.getElementById(fieldId + "-error");
+    var wrap = input.closest(".field");
+    if (message) {
+      wrap.classList.add("has-error");
+      errorEl.textContent = message;
+      input.setAttribute("aria-invalid", "true");
+    } else {
+      wrap.classList.remove("has-error");
+      errorEl.textContent = "";
+      input.removeAttribute("aria-invalid");
+    }
+  }
+
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
+    var firstInvalid = null;
 
-    let firstInvalid = null;
-    let allValid = true;
-
-    fields.forEach(({ id, validate, message }) => {
-      const input = document.getElementById(id);
-      const isValid = validate(input.value);
-      setError(id, isValid ? '' : message);
-      if (!isValid) {
-        allValid = false;
-        if (!firstInvalid) firstInvalid = input;
-      }
+    fields.forEach(function (field) {
+      var input = document.getElementById(field.id);
+      var value = input.value.trim();
+      var invalid = value.length === 0 || (field.isEmail && !isValidEmail(value));
+      setError(field.id, invalid ? field.message : "");
+      if (invalid && !firstInvalid) firstInvalid = input;
     });
 
-    if (!allValid) {
+    if (firstInvalid) {
       firstInvalid.focus();
       return;
     }
 
-    // No backend is wired up: simulate a successful submission.
-    form.classList.add('is-submitted');
-    status.classList.add('is-visible');
-    status.setAttribute('tabindex', '-1');
-    status.focus();
+    form.classList.add("is-hidden");
+    if (status) {
+      status.classList.add("is-visible");
+      status.setAttribute("tabindex", "-1");
+      status.focus();
+    }
+  });
+
+  fields.forEach(function (field) {
+    var input = document.getElementById(field.id);
+    input.addEventListener("input", function () {
+      if (input.closest(".field").classList.contains("has-error")) {
+        var value = input.value.trim();
+        var invalid = value.length === 0 || (field.isEmail && !isValidEmail(value));
+        if (!invalid) setError(field.id, "");
+      }
+    });
   });
 })();
