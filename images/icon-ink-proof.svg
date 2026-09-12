@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="iipTitle">
+  <title id="iipTitle">Ink roller pulling a proof</title>
+  <rect x="18" y="32" width="84" height="10" fill="#7C2A1E"/>
+  <rect x="22" y="46" width="76" height="22" rx="11" fill="#241E17"/>
+  <rect x="10" y="52" width="10" height="10" fill="#241E17"/>
+  <rect x="100" y="52" width="10" height="10" fill="#241E17"/>
+  <rect x="28" y="82" width="64" height="10" fill="none" stroke="#241E17" stroke-width="6"/>
+</svg>

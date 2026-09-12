@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="pjTitle">
+  <title id="pjTitle">California job case compartments</title>
+  <rect x="20" y="34" width="120" height="92" fill="none" stroke="#241E17" stroke-width="9"/>
+  <path d="M20 60h120M20 86h120M20 106h120M56 34v92M92 34v60M116 34v60M38 106v20M74 106v20M104 106v20M128 106v20" fill="none" stroke="#241E17" stroke-width="4"/>
+  <rect x="60" y="64" width="28" height="18" fill="#7C2A1E"/>
+</svg>

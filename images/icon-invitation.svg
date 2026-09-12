@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="iiTitle">
+  <title id="iiTitle">Envelope with a wax seal</title>
+  <rect x="20" y="34" width="80" height="60" rx="3" fill="none" stroke="#241E17" stroke-width="8"/>
+  <path d="M20 36 L60 68 L100 36" fill="none" stroke="#241E17" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="60" cy="66" r="11" fill="#7C2A1E"/>
+</svg>

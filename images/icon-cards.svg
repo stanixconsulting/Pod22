@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="icTitle">
+  <title id="icTitle">Stacked business cards</title>
+  <rect x="24" y="26" width="72" height="46" rx="3" fill="none" stroke="#241E17" stroke-width="7" transform="rotate(-7 60 49)"/>
+  <rect x="26" y="46" width="72" height="46" rx="3" fill="#241E17"/>
+  <rect x="38" y="60" width="38" height="6" fill="#EFE8D8"/>
+  <rect x="38" y="73" width="16" height="6" fill="#7C2A1E"/>
+</svg>
