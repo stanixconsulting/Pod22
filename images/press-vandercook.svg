@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="pvTitle">
+  <title id="pvTitle">Vandercook cylinder proof press</title>
+  <rect x="24" y="108" width="112" height="18" fill="#241E17"/>
+  <rect x="38" y="126" width="16" height="16" fill="#241E17"/>
+  <rect x="106" y="126" width="16" height="16" fill="#241E17"/>
+  <rect x="34" y="86" width="58" height="10" fill="#241E17"/>
+  <rect x="34" y="70" width="42" height="9" fill="#241E17"/>
+  <rect x="34" y="100" width="30" height="9" fill="#7C2A1E"/>
+  <circle cx="112" cy="82" r="34" fill="none" stroke="#241E17" stroke-width="12"/>
+  <circle cx="112" cy="82" r="7" fill="#7C2A1E"/>
+</svg>

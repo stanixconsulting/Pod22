@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="ipTitle">
+  <title id="ipTitle">Framed, numbered art print</title>
+  <rect x="26" y="20" width="68" height="68" rx="2" fill="none" stroke="#241E17" stroke-width="8"/>
+  <circle cx="60" cy="54" r="18" fill="#7C2A1E"/>
+  <rect x="36" y="98" width="48" height="7" fill="#241E17"/>
+</svg>
